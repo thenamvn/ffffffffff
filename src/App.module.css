@@ -1,0 +1,9 @@
+.bottomNavigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* High z-index to keep it on top */
+    background-color: #f8f9fa; /* Optional: background color for better visibility */
+    border-top: 1px solid #e9ecef; /* Optional: adds a border top for styling */
+    padding-bottom: env(safe-area-inset-bottom); /* Adjust for safe area on devices like iPhone X */
+}

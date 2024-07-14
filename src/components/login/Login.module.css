@@ -1,0 +1,225 @@
+/* Responsive CSS Code */
+
+/* General Styles */
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
+  background-color: #f6f6f6;
+  background-image: url('../../../public/images/bg.jpg');
+  background-size: cover;
+}
+.signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f6f6f6;
+  background-image: url('../../../public/images/bg.jpg');
+  background-size: cover;
+}
+.loginForm {
+  max-height: 100vh;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  width: 100%; /* Full width form */
+  max-width: 300px; /* Maximum width for form */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Centering styles */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ProfilePicture {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.ProfilePicture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inputContainer input {
+  border: 1px solid #ccc;
+  outline: none;
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+  position: relative;
+  bottom: 14px;
+  border-radius: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 18px; 
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.inputContainer input:focus,
+.inputContainer input:hover {
+  outline: none;
+  border-color: rgba(129, 140, 248);
+  background-color: #fff;
+  box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+.forgotPassword {
+  color: black;
+  text-decoration: underline;
+  margin-top: -10px;
+  cursor: pointer;
+  display: block;
+  text-align: right;
+}
+
+/* Checkbox Styles */
+.checkboxWrapper {
+  --size: 1rem;
+  --background:rgba(255, 255, 255, 0);
+  font-size: var(--size);
+}
+
+.checkboxWrapper *,
+.checkboxWrapper *::after,
+.checkboxWrapper *::before {
+  box-sizing: border-box;
+}
+
+.checkboxWrapper input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkboxWrapper .checkboxLabel {
+  width: var(--size);
+}
+
+.checkboxWrapper .checkboxLabel:before {
+  content: ' ';
+  display: block;
+  height: var(--size);
+  width: var(--size);
+  position: absolute;
+  top: calc(var(--size) * 0.125);
+  left: 0;
+  background: var(--background);  
+}
+
+.checkboxWrapper .checkboxLabel:after {
+  content: ' ';
+  display: block;
+  height: var(--size);
+  width: var(--size);
+  border: calc(var(--size) * .14) solid #000;
+  transition: 200ms;
+  position: absolute;
+  top: calc(var(--size) * 0.125);
+  left: 0;
+  background: var(--background);  
+}
+
+.checkboxWrapper .checkboxLabel:after {
+  transition: 100ms ease-in-out;
+}
+
+.checkboxWrapper .checkboxInput:checked ~ .checkboxLabel:after {
+  border-top-style: none; 
+  border-right-style: none;
+  -ms-transform: rotate(-45deg); /* IE9 */
+  transform: rotate(-45deg);
+  height: calc(var(--size) * .5);
+  border-color: green;
+}
+
+.checkboxWrapper .checkbox {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  /* Mobile Safari: */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);   
+}
+
+.checkboxWrapper .checkboxLabel:after:hover,
+.checkboxWrapper .checkboxLabel:after:active {
+   border-color: green; 
+}
+
+.checkboxWrapper .checkboxLabel {
+  margin-right: calc(var(--size) * 0.45);
+}
+
+/* Button Styles */
+.loginButton {
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: #00a84f;
+  height: 50px;
+  font-size: 1.4em;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 7em;
+  z-index: 2;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto; /* Center the button */
+  border: none;
+}
+
+.loginButton:hover {
+  color: #fff;
+}
+
+.loginButtonText {
+  align-items: center;
+  background: #cdcdd1;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.loginButton:hover .loginButtonText {
+  background: transparent;
+}
+
+.noAccount {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.link {
+  font-weight: 800;
+  color: #2879f3;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #f37e10;
+  text-decoration: underline;
+}
+
+.errorMessage {
+  color: red;
+}

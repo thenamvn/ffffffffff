@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="container">
+      <img
+        src="../../../public/favicon.ico"
+        alt="Profile Photo"
+        class="profile-photo"
+      />
+      <div class="profile-details">
+        <div class="name">Nguyễn Thế Nam</div>
+        <div class="followers" onclick="openFollowers()">Followers: 1000</div>
+        <div class="following" onclick="openFollowing()">Following: 500</div>
+        <button class="follow-button" onclick="followUser()">Follow</button>
+        <div class="bio">
+          I am a software engineer and game developer. I love building things
+          and playing games.
+        </div>
+        <div class="links">
+          <a href="https://www.github.com/johndoe"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.twitter.com/johndoe"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/johndoe"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="hosted-games">
+          <a href="game-detail-page.html">Game 1</a>
+          <a href="game-detail-page.html">Game 2</a>
+          <a href="game-detail-page.html">Game 3</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Add some interactivity to the app using JavaScript
+      function openFollowers() {
+        // Open the list of followers
+        alert("Opening followers list...");
+      }
+
+      function openFollowing() {
+        // Open the list of people the user is following
+        alert("Opening following list...");
+      }
+
+      function followUser() {
+        // Follow the user
+        alert("Following user...");
+      }
+    </script>
+  </body>
+</html>

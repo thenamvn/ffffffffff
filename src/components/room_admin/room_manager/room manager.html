@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./admin_room.module.css" />
+  </head>
+  <body>
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="alphawolfvn.web.app">
+            <i class="fa fa-home fa-2x"></i>
+            <span class="nav-text"> Home </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-globe fa-2x"></i>
+            <span class="nav-text"> Global Surveyors </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-comments fa-2x"></i>
+            <span class="nav-text"> Group Hub Forums </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-camera-retro fa-2x"></i>
+            <span class="nav-text"> Survey Photos </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-film fa-2x"></i>
+            <span class="nav-text"> Surveying Tutorials </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-book fa-2x"></i>
+            <span class="nav-text"> Game Room Manager </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-cogs fa-2x"></i>
+            <span class="nav-text"> User Management </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-map-marker fa-2x"></i>
+            <span class="nav-text"> Member Map </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-info fa-2x"></i>
+            <span class="nav-text"> Documentation </span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="logout">
+        <li class="user-profile">
+          <a href="#">
+            <i class="fa fa-user fa-2x"></i>
+            <span class="nav-text"> User Profile </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-power-off fa-2x"></i>
+            <span class="nav-text"> Logout </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h1>Game Room Manager</h1>
+        <div class="card">
+          <div class="card-header">
+            <h3>Room List</h3>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Room Name</th>
+                  <th>Room Type</th>
+                  <th>Room Status</th>
+                  <th>Room Owner</th>
+                  <th>Room Members</th>
+                  <th>Room Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Room 1</td>
+                  <td>Public</td>
+                  <td>Active</td>
+                  <td>AlphaWolfVN</td>
+                  <td>5</td>
+                  <td>
+                    <button class="button">Edit</button>
+                    <button class="button">Delete</button>
+                  </td>
+                </tr>
+                <!-- More rows as needed -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Create Room</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="room-name">Room Name</label>
+                <input type="text" id="room-name" name="room-name" />
+              </div>
+              <div class="form-group">
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="room-type">
+                  <option value="public">Public</option>
+                  <option value="private">Private</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="button" type="submit">Create Room</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

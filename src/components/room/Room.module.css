@@ -1,0 +1,387 @@
+/* Room.module.css */
+.bg_room {
+  top: 0; /* Place the button at the top of the page */
+  left: 0; /* Place the button at the start of the page */
+  right: 0; /* Stretch the button to the end of the page */
+  bottom: 0; /* Stretch the button to the bottom of the page */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+}
+
+
+.leaderboardItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #ccc; /* Bo viền dưới */
+  transition: transform 0.2s ease-in-out; /* Hiệu ứng transition */
+  background-color: #f9f9f9; /* Màu nền */
+  border-radius: 10px;
+}
+
+.leaderboardItem:hover {
+  transform: scale(1.1); /* Phóng to khi hover */
+  background-color: #e0e0e0; /* Màu nền khi hover */
+}
+
+/* Hình ảnh người dùng */
+.leaderboardItem img {
+  width: 40px; /* Kích thước ảnh */
+  height: 40px;
+  border-radius: 50%; /* Để ảnh tròn */
+  margin-right: 10px; /* Khoảng cách giữa ảnh và tên */
+}
+
+/* Tên người dùng */
+.leaderboardItem .name {
+  flex: 1; /* Để tên căn chỉnh đúng vị trí */
+}
+
+.shareButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Adjusted for better positioning within .adminView */
+  position: relative;
+  margin-right: 10px; /* Adds spacing between buttons */
+}
+
+.shareButton:hover {
+  background-color: #0056b3;
+}
+
+.copyButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Adjusted for better positioning within .adminView */
+  position: relative;
+  margin-right: 10px; /* Adds spacing between buttons */
+}
+
+.adminView {
+  display: flex;
+  /* Ensure proper alignment and spacing */
+  align-items: center;
+  justify-content: start;
+  position: relative; /* Added to position .shareButton relatively within */
+}
+
+
+.roomInfo {
+  z-index: 9999;
+  /* display: none; */ /* Xóa dòng này nếu bạn muốn điều khiển hiển thị thông qua JSX */
+  max-height: 75vh;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 1); /* Màu nền trắng */
+  width: 100%; /* Chiều rộng đầy đủ */
+  width: 75vw; /* Chiều rộng tối đa */
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  /* Căn giữa */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Định dạng nội dung */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.roomTitle {
+  font-size: 24px;
+  color: #333;
+  align-content: center;
+}
+
+.roomLink {
+  color: #666;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.roomLink a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.roomLink a:hover {
+  text-decoration: underline;
+}
+
+.uploadForm {
+  z-index: 1000;
+  max-height: 100vh;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  background-color: rgba(24, 26, 27, 0.7);
+  width: 90%; /* Adjusted for better responsiveness */
+  max-width: 300px; /* Maximum width for form */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Centering styles */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* New styles for centering content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fileInput {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.descriptionInput {
+  display: inline-block;
+  height: 100px; /* Adjust as needed */
+  vertical-align: middle;
+  position: relative;
+  bottom: 14px;
+  border-radius: 7px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 18px; 
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.descriptionInput:focus,
+.descriptionInput:hover {
+  outline: none;
+  border-color: rgba(129, 140, 248);
+  background-color: #fff;
+  box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+
+.uploadButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  bottom: 100px;
+  right: 20px;
+  position: fixed;
+  margin: 10px;
+}
+
+.uploadButton:hover {
+  background-color: #0056b3;
+}
+
+
+.sliderContainer {
+  position: relative;
+  width: 80vw;
+  height: 50vh;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+.uploadedImage {
+  width: 80vw;
+  height: auto;
+  max-width: 80vw;
+  max-height: 50vh;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .uploadedImage {
+    width: 95vw;
+    max-height: 40vh;
+  }
+}
+
+
+.tooltip {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  bottom: 10px;
+}
+
+.uploadedImage {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%; /* 100% of the slider's width */
+  height: 100%; /* maintain aspect ratio */
+  object-fit: contain; /* cover the entire slider */
+}
+
+.tooltip {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  bottom: 10px;
+}
+
+.leaderboard {
+  margin-top: 20px;
+  width: 80vw;
+  max-height: min-content;
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 300px; /* Set a max height for the leaderboard */
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+  /* Center the leaderboard */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center the content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.leaderboard h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard li {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for transform and box-shadow */
+}
+
+.leaderboard li:last-child {
+  border-bottom: none;
+}
+
+.leaderboard li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.leaderboard li:hover {
+  background: #e9e9e9;
+  transform: translateY(-5px); /* Slightly raise the item */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for elevation effect */
+}
+
+.missionDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.noContentMessage {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.fileUploadContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fileInputLabel {
+  background-color: #007bff; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.fileInputLabel:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.fas.fa-upload {
+  font-size: 20px; /* Adjust icon size */
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) {
+  .uploadForm {
+    max-width: 400px; /* Slightly larger form for tablets */
+  }
+}
+
+/* Media query for desktops and laptops */
+@media (min-width: 1024px) {
+  .uploadForm {
+    max-width: 500px; /* Larger form for desktops and laptops */
+  }
+}
+
+/* Additional media query for large desktops */
+@media (min-width: 1200px) {
+  .uploadForm {
+    max-width: 600px; /* Even larger form for large desktops */
+  }
+}
